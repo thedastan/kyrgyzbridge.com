@@ -6,11 +6,13 @@ import { useTranslations } from "next-intl";
 
 const BurgerMenu = ({
   isOpen,
+  setIsOpen,
 }: {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) => {
   const t = useTranslations("Header");
+
   return (
     <div
       id="menu-overlay"
@@ -27,11 +29,21 @@ const BurgerMenu = ({
       >
         <div className="w-full flex flex-col justify-between items-start h-[70ch]">
           <div className="flex flex-col items-start w-[100%] text-start p-[20px] gap-4 mt-16 ">
-            <Link href="/#hero">{t("hero")}</Link>
-            <Link href="/">{t("about")}</Link>
-            <Link href="/">{t("projects")}</Link>
-            <Link href="/">{t("mission")}</Link>
-            <Link href="/">{t("events")}</Link>
+            <Link onClick={() => setIsOpen(false)} href="/#hero">
+              {t("hero")}
+            </Link>
+            <Link onClick={() => setIsOpen(false)} href="#about">
+              {t("about")}
+            </Link>
+            <Link onClick={() => setIsOpen(false)} href="#project">
+              {t("projects")}
+            </Link>
+            <Link onClick={() => setIsOpen(false)} href="#mission">
+              {t("mission")}
+            </Link>
+            <Link onClick={() => setIsOpen(false)} href="#events">
+              {t("events")}
+            </Link>
             <LanguageSelect />
           </div>
         </div>

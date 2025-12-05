@@ -27,7 +27,7 @@ const WeProjects = () => {
     },
   ];
   return (
-    <section className="py-10">
+    <section id="project" className="py-10">
       <div className="container">
         <div
           data-aos="fade-up"

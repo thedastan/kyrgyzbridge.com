@@ -11,7 +11,7 @@ const Events = () => {
   const t = useTranslations("Events");
 
   return (
-    <section className="py-10">
+    <section id="events" className="py-10">
       <div className="flex flex-col justify-center items-center">
         <Description
           data-aos="fade-up"

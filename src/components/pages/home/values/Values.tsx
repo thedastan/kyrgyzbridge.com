@@ -26,7 +26,7 @@ const Values = () => {
     },
   ];
   return (
-    <section className="bg-white py-20">
+    <section id="mission" className="bg-white py-20">
       <div className="container flex flex-col items-center gap-10">
         <Description
           data-aos="fade-up"

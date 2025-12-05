@@ -38,7 +38,7 @@ const WhoAre = () => {
         </div>
       </div>
 
-      <div className="bg-[#F3F5F0]">
+      <div id="about" className="bg-[#F3F5F0]">
         <div className=""></div>
         <div
           data-aos="fade-up"

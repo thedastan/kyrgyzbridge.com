@@ -4,7 +4,7 @@ import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { LuUserRound } from "react-icons/lu";
-import logo from "@/assets/images/logo.png";
+import logo from "@/assets/images/logo-new.png";
 import frame from "@/assets/svg/frame.svg";
 import fone from "@/assets/images/Group 1321314511.png";
 
@@ -120,7 +120,7 @@ const Contacts = () => {
                 </div>
 
                 <div className="w-full max-w-[100%] bg-white border rounded-[24px] md:p-6 p-3 flex flex-col md:gap-[20px] gap-[12px]">
-                  <Image src={logo} alt="img" />
+                  <Image width={90} height={63} src={logo} alt="img" />
                   <p className="text-gray-500 text-[14px]">{t("year")}</p>
                 </div>
               </div>
