@@ -5,7 +5,7 @@ export const metadata = generateMetadata({
   title: "Мост в Кыргызстан",
   description:
     "Brücke nach Kirgisistan — это независимая некоммерческая организация, основанная в Швейцарии в 2012 году.",
-  url: "https://next-structure-seven.vercel.app/",
+  url: "https://most-kyrgyzstan.vercel.app",
   image: "/logo.png",
 });
 

@@ -55,14 +55,14 @@ export const generateMetadata = ({
 
 // Дополнительная функция для структурированных данных
 
-// export const generateStructuredData = () => ({
-// 	'@context': 'https://schema.org',
-// 	'@type': 'WebSite',
-// 	'name': 'Мост в Кыргызстан', ////! Имя проекта
-// 	'url': 'https://next-structure-seven.vercel.app/', ////! url проекта
-// 	'potentialAction': {
-// 			'@type': 'SearchAction',
-// 			'target': 'https://next-structure-seven.vercel.app/search?q={search_term_string}', ////! Имя проекта
-// 			'query-input': 'required name=search_term_string'
-// 	}
-// });
+export const generateStructuredData = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Мост в Кыргызстан", ////! Имя проекта
+  url: "https://most-kyrgyzstan.vercel.app/", ////! url проекта
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://most-kyrgyzstan.vercel.app/search?q={search_term_string}", ////! Имя проекта
+    "query-input": "required name=search_term_string",
+  },
+});
