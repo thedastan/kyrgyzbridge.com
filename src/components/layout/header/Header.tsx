@@ -46,11 +46,11 @@ const Header = () => {
               </div>
             </div>
             <div className="md:flex hidden items-center gap-[27px] text-gray-600">
-              <Link href="#hero">{t("hero")}</Link>
-              <Link href="#about">{t("about")}</Link>
-              <Link href="#project">{t("projects")}</Link>
-              <Link href="#mission">{t("mission")}</Link>
-              <Link href="#events">{t("events")}</Link>
+              <Link href="/#hero">{t("hero")}</Link>
+              <Link href="/#about">{t("about")}</Link>
+              <Link href="/#project">{t("projects")}</Link>
+              <Link href="/#mission">{t("mission")}</Link>
+              <Link href="/#events">{t("events")}</Link>
             </div>
           </div>
         </div>

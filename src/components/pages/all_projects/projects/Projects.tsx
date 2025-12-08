@@ -4,6 +4,7 @@ import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import { Title } from "@/components/ui/text/Title";
 import { useTranslations } from "next-intl";
 import { useGetProjectsQuery } from "@/redux/api/blog";
+import Link from "next/link";
 
 const Projects = () => {
   const t = useTranslations("WeProjects");
@@ -23,7 +24,8 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[10px] gap-[20px] mt-10">
           {data?.map((el, index) => (
-            <div
+            <Link
+              href={`/all_projects/${el.id}`}
               data-aos="fade-up"
               data-aos-delay={index * 300}
               key={index}
@@ -36,8 +38,12 @@ const Projects = () => {
               <Title className="!text-[24px] md:w-[80%] font-[600] leading-[100%] text-white">
                 {el.title}
               </Title>
-              <Description className="md:w-[87%]">{el.description}</Description>
-            </div>
+              <Description className="md:w-[87%]">
+                {el.description.length > 150
+                  ? el.description.slice(0, 150) + "..."
+                  : el.description}
+              </Description>
+            </Link>
           ))}
         </div>
       </div>

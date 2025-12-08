@@ -4,6 +4,7 @@ import { Title } from "@/components/ui/text/Title";
 import logo from "@/assets/images/k.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const data = [logo, logo, logo, logo, logo, logo, logo];
 
@@ -42,7 +43,7 @@ const WhoAre = () => {
         <div className=""></div>
         <div
           data-aos="fade-up"
-          className="container !py-20 flex flex-col justify-center items-center gap-5 "
+          className="container !py-28 flex flex-col justify-center items-center gap-5 "
         >
           <Description className="border-b pb-2 border-[#E16C2B]">
             {t("title")}
@@ -51,7 +52,9 @@ const WhoAre = () => {
             {t("description")}
           </Title>
 
-          <Button> {t("about_us")}</Button>
+          <Link href="#project">
+            <Button> {t("about_us")}</Button>
+          </Link>
         </div>
       </div>
     </section>

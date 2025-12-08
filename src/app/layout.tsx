@@ -28,29 +28,22 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     siteName: SITE_NAME,
-    images: [
-      {
-        url: "/logo.png",
-        alt: SITE_NAME,
-      },
-    ],
+    images: [{ url: "/logo.png", alt: SITE_NAME }],
     locale: "ru_RU",
     type: "website",
   },
 };
 
+// ✅ Корневой layout НЕ принимает params
 export default async function RootLayout({
   children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}>) {
-  const { locale } = await params;
+}: Readonly<{ children: React.ReactNode }>) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang="en">
+      {" "}
+      {/* временно "en", или можно определить иначе */}
       <Head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

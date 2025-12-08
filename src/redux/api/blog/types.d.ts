@@ -19,3 +19,18 @@ namespace CONTACTS {
 
   export type GetContactsReq = void;
 }
+
+namespace EVENTS {
+  export type GetEventsRes = {
+    id: number;
+    title: string;
+    image: string;
+    address: string;
+    start_time: string;
+    start_end: string;
+    start_date: string;
+    link: string;
+  }[];
+
+  export type GetEventsReq = void;
+}

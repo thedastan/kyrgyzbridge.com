@@ -10,6 +10,14 @@ const api = index.injectEndpoints({
       providesTags: ["blog"],
     }),
 
+    getEvent: build.query<EVENTS.GetEventsRes, EVENTS.GetEventsReq>({
+      query: () => ({
+        url: `/event/`,
+        method: "GET",
+      }),
+      providesTags: ["event"],
+    }),
+
     getProjects: build.query<BLOG.GetBlogRes, BLOG.GetBlogReq>({
       query: () => ({
         url: `/projects/`,
@@ -28,5 +36,9 @@ const api = index.injectEndpoints({
   }),
 });
 
-export const { useGetBlogQuery, useGetProjectsQuery, useGetContactsQuery } =
-  api;
+export const {
+  useGetBlogQuery,
+  useGetProjectsQuery,
+  useGetContactsQuery,
+  useGetEventQuery,
+} = api;

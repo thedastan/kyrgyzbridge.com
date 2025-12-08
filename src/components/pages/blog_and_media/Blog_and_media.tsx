@@ -5,9 +5,8 @@ import { Title } from "@/components/ui/text/Title";
 import Button from "@/components/ui/button/Button";
 import { useTranslations } from "next-intl";
 import { useGetBlogQuery } from "@/redux/api/blog";
-import Link from "next/link";
 
-const Blog = () => {
+const Blog_and_media = () => {
   const t = useTranslations("Blog");
   const { data } = useGetBlogQuery();
   return (
@@ -36,7 +35,7 @@ const Blog = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
-                className={`h-[400px] text-white  rounded-[24px] overflow-hidden
+                className={`h-[400px] text-white rounded-[24px] overflow-hidden
           ${isThirdFull ? "md:col-span-2" : "w-full"}
         `}
               >
@@ -45,11 +44,6 @@ const Blog = () => {
                     {el.title}
                   </Title>
                   <Description>{el.description}</Description>
-                  <Link href={``}>
-                    <Button className="bg-[#E16C2B] border-none mt-2">
-                      {t("read")}
-                    </Button>
-                  </Link>
                 </div>
               </div>
             );
@@ -60,4 +54,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blog_and_media;
