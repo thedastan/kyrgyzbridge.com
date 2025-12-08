@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.scss";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/constants/seo";
-import { LayoutPage } from "@/components/layout/LayoutPage";
 import Head from "./Head";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Providers from "./provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -56,7 +56,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <LayoutPage>{children}</LayoutPage>
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
     </html>

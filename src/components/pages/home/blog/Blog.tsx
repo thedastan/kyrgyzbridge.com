@@ -1,33 +1,13 @@
 import { Description } from "@/components/ui/text/Description";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
-import img1 from "@/assets/images/blog.jpg";
 import { Title } from "@/components/ui/text/Title";
 import Button from "@/components/ui/button/Button";
 import { useTranslations } from "next-intl";
+import { useGetBlogQuery } from "@/redux/api/blog";
 
 const Blog = () => {
   const t = useTranslations("Blog");
-
-  const data = [
-    {
-      img: img1,
-      title: "Истории добра",
-      desc: "Люди, события и истории, которые стоят за нашей работой.",
-      link: "#",
-    },
-    {
-      img: img1,
-      title: "Истории добра",
-      desc: "Люди, события и истории, которые стоят за нашей работой.",
-      link: "#",
-    },
-    {
-      img: img1,
-      title: "Истории добра",
-      desc: "Люди, события и истории, которые стоят за нашей работой.",
-      link: "#",
-    },
-  ];
+  const { data } = useGetBlogQuery();
   return (
     <section className="py-10">
       <div className="container">
@@ -42,7 +22,7 @@ const Blog = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[10px] gap-[20px] mt-10">
-          {data.map((el, index) => {
+          {data?.map((el, index) => {
             const isThirdFull = index % 2 === 0 && index === data.length - 1;
 
             return (
@@ -50,7 +30,7 @@ const Blog = () => {
                 data-aos="fade-up"
                 key={index}
                 style={{
-                  backgroundImage: `url(${el.img.src})`,
+                  backgroundImage: `url(${el.image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -62,7 +42,7 @@ const Blog = () => {
                   <Title className="!text-[24px] font-[600] leading-[100%] text-white">
                     {el.title}
                   </Title>
-                  <Description>{el.desc}</Description>
+                  <Description>{el.description}</Description>
                   <Button className="bg-[#E16C2B] border-none mt-2">
                     {t("read")}
                   </Button>

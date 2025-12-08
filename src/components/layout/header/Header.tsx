@@ -24,7 +24,9 @@ const Header = () => {
         <div className="container">
           <div className="flex justify-between md:flex-row flex-row-reverse items-center">
             <div className="flex gap-[40px] items-center">
-              <Image width={90} height={63} src={logo} alt="img" />
+              <Link href="/">
+                <Image width={90} height={63} src={logo} alt="img" />
+              </Link>
               <div className="hidden items-center md:flex">
                 <LanguageSelect />
               </div>

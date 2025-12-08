@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import img from "@/assets/images/oum.png";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Hero = () => {
   const t = useTranslations("Hero");
@@ -28,10 +29,14 @@ const Hero = () => {
               </TitleComponent>
               <Description>{t("description")}</Description>
               <div className="flex gap-[12px] justify-between md:justify-start">
-                <Button className="px-[40px] md:px-[54px] border-none  py-[10px] rounded-[30px] bg-[#E16C2B] text-[14px] text-[#FFFFFF]">
-                  {t("about_us")}
-                </Button>
-                <Button> {t("projects")}</Button>
+                <Link href="#about">
+                  <Button className="px-[40px] md:px-[54px] border-none  py-[10px] rounded-[30px] bg-[#E16C2B] text-[14px] text-[#FFFFFF]">
+                    {t("about_us")}
+                  </Button>
+                </Link>
+                <Link href="#project">
+                  <Button> {t("projects")}</Button>
+                </Link>
               </div>
             </div>
 

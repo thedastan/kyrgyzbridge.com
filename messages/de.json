@@ -1,0 +1,58 @@
+{
+  "Header": {
+    "hero": "Startseite",
+    "about": "Über uns",
+    "projects": "Projekte",
+    "mission": "Unsere Mission",
+    "events": "Veranstaltungen"
+  },
+  "Hero": {
+    "title": "Brücke der Menschlichkeit und Hoffnung",
+    "description": "Wir verbinden Menschen und Organisationen, die helfen möchten.",
+    "about_us": "Über uns",
+    "projects": "Projekte"
+  },
+  "WhoAre": {
+    "title": "WER SIND WIR?",
+    "description": "Brücke nach Kirgisistan ist eine unabhängige, gemeinnützige Organisation, die 2012 in der Schweiz gegründet wurde.",
+    "about_us": "Über uns",
+    "bridge": "Brücke nach Kirgisistan"
+  },
+  "Values": {
+    "title": "WERTE",
+    "box_title": "Humanismus",
+    "box_description": "Im Mittelpunkt unserer Arbeit steht der Mensch und seine Würde.",
+    "box_title2": "Transparenz",
+    "box_description2": "Wir berichten offen über unsere Projekte und Ergebnisse.",
+    "box_title3": "Unabhängigkeit",
+    "box_description3": "Wir handeln frei, orientiert an unseren Werten und unserer Verantwortung."
+  },
+  "WeProjects": {
+    "title": "UNSERE PROJEKTE",
+    "description": "Lernen Sie die Visionäre hinter unserem Erfolg kennen",
+    "all_projects": "Alle Projekte"
+  },
+  "Events": {
+    "title": "VERANSTALTUNGEN & KALENDER",
+    "more": "Mehr erfahren"
+  },
+  "Blog": {
+    "title": "BLOG & MEDIEN",
+    "description": "Taten, die Leben verändern",
+    "read": "Lesen"
+  },
+  "Contacts": {
+    "title": "Kontaktformular",
+    "description": "Füllen Sie das Formular unten aus – wir melden uns in Kürze bei Ihnen.",
+    "name": "Name*",
+    "email": "E-Mail*",
+    "message": "Nachricht*",
+    "checkbox": "Einwilligung zur Datenverarbeitung*",
+    "send": "SENDEN",
+    "media": "Medien",
+    "title2": "Möchten Sie Teil der Veränderung sein?",
+    "subscribe": "Abonnieren",
+    "email2": "E-Mail eingeben",
+    "year": "© 2025 Alle Rechte vorbehalten. Brücke nach Kirgistan."
+  }
+}

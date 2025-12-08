@@ -1,12 +1,11 @@
-import Button from "@/components/ui/button/Button";
+"use client";
 import { Description } from "@/components/ui/text/Description";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
 import { Title } from "@/components/ui/text/Title";
 import { useTranslations } from "next-intl";
 import { useGetProjectsQuery } from "@/redux/api/blog";
-import Link from "next/link";
 
-const WeProjects = () => {
+const Projects = () => {
   const t = useTranslations("WeProjects");
   const { data } = useGetProjectsQuery();
   return (
@@ -20,16 +19,10 @@ const WeProjects = () => {
             <Description>{t("title")}</Description>
             <TitleComponent>{t("description")}</TitleComponent>
           </div>
-
-          <Link href="/all_projects">
-            <Button className="border-none text-white bg-[#E16C2B]">
-              {t("all_projects")}
-            </Button>
-          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[10px] gap-[20px] mt-10">
-          {data?.slice(0, 3).map((el, index) => (
+          {data?.map((el, index) => (
             <div
               data-aos="fade-up"
               data-aos-delay={index * 300}
@@ -52,4 +45,4 @@ const WeProjects = () => {
   );
 };
 
-export default WeProjects;
+export default Projects;
