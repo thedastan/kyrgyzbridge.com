@@ -18,7 +18,7 @@ const LanguageSelect = ({ textColor = "text-white" }: LanguageSelectProps) => {
   const options = [
     { value: "en", label: "ENG" },
     { value: "ru", label: "RUS" },
-    { value: "kg", label: "KGZ" },
+    { value: "ky", label: "KGZ" },
     { value: "de", label: "DEU" },
   ];
 

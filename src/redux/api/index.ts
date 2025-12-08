@@ -6,7 +6,7 @@ import {
 
 const getLocaleFromPathname = () => {
   if (typeof window !== "undefined") {
-    const match = window.location.pathname.match(/^\/(ru|en|kg|de)/);
+    const match = window.location.pathname.match(/^\/(ru|en|ky|de)/);
     return match ? match[1] : "ru";
   }
   return "ru";
