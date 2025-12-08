@@ -32,16 +32,16 @@ const BurgerMenu = ({
             <Link onClick={() => setIsOpen(false)} href="/#hero">
               {t("hero")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="#about">
+            <Link onClick={() => setIsOpen(false)} href="/#about">
               {t("about")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="#project">
+            <Link onClick={() => setIsOpen(false)} href="/#project">
               {t("projects")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="#mission">
+            <Link onClick={() => setIsOpen(false)} href="/#mission">
               {t("mission")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="#events">
+            <Link onClick={() => setIsOpen(false)} href="/#events">
               {t("events")}
             </Link>
             <LanguageSelect />

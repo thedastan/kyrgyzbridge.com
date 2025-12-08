@@ -45,7 +45,7 @@ const Blog = () => {
                     {el.title}
                   </Title>
                   <Description>{el.description}</Description>
-                  <Link href={``}>
+                  <Link href={`/blog_and_media/${el.id}`}>
                     <Button className="bg-[#E16C2B] border-none mt-2">
                       {t("read")}
                     </Button>
