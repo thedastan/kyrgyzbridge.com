@@ -100,17 +100,29 @@ body {
 .notify.success {
   background: #2ecc71 !important;
   color: white !important;
+  width: 200px;
+  display: flex;
+  text-align: center;
 }
 
 .notify.error {
   background: #e74c3c !important;
+  width: 200px;
+  display: flex;
+  text-align: center;
 }
 
 .notify.warning {
   background: #f39c12 !important;
   color: black !important;
+  width: 200px;
+  display: flex;
+  text-align: center;
 }
 
 .notify.default {
   background: #2c3e50 !important;
+  width: 200px;
+  display: flex;
+  text-align: center;
 }

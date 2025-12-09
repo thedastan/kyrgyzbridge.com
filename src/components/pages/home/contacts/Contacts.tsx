@@ -70,7 +70,7 @@ const Contacts = () => {
   };
 
   return (
-    <section id="contact" className="bg-[#F3F5F0] py-[120px] md:py-[30px]">
+    <section id="contact" className="bg-[#F3F5F0] py-[25px] md:py-[30px]">
       <div className="overflow-hidden">
         <div className="flex h-[88px] items-center">
           <div className="flex">
@@ -172,7 +172,7 @@ const Contacts = () => {
                   </form>
                 </div>
 
-                <div className="w-full max-w-[100%] bg-white border rounded-[24px] md:p-6 p-3 flex flex-col md:gap-[20px] gap-[12px]">
+                <div className="w-full max-w-[100%] bg-white border rounded-[24px] md:p-6 p-3 flex md:flex-col md:items-start items-center md:gap-[20px] gap-[12px]">
                   <Image width={90} height={63} src={logo} alt="logo" />
                   <p className="text-gray-500 text-[14px]">{t("year")}</p>
                 </div>

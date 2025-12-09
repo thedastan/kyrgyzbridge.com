@@ -13,7 +13,7 @@ const Projects = () => {
     <section id="project" className="py-10">
       <div className="container">
         <div
-          data-aos="fade-up"
+          // data-aos="fade-up"
           className="flex md:flex-row flex-col gap-3 justify-between md:items-end items-start"
         >
           <div className="w-full max-w-[800px] flex flex-col gap-5">
@@ -26,7 +26,7 @@ const Projects = () => {
           {data?.map((el, index) => (
             <Link
               href={`/all_projects/${el.id}`}
-              data-aos="fade-up"
+              // data-aos="fade-up"
               data-aos-delay={index * 300}
               key={index}
               style={{
