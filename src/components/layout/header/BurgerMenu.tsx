@@ -29,19 +29,19 @@ const BurgerMenu = ({
       >
         <div className="w-full flex flex-col justify-between items-start h-[70ch]">
           <div className="flex flex-col items-start w-[100%] text-start p-[20px] gap-4 mt-16 ">
-            <Link onClick={() => setIsOpen(false)} href="/#hero">
+            <Link onClick={() => setIsOpen(false)} href="#hero">
               {t("hero")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="/#about">
+            <Link onClick={() => setIsOpen(false)} href="#about">
               {t("about")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="/#project">
+            <Link onClick={() => setIsOpen(false)} href="#project">
               {t("projects")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="/#mission">
+            <Link onClick={() => setIsOpen(false)} href="#mission">
               {t("mission")}
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="/#events">
+            <Link onClick={() => setIsOpen(false)} href="#events">
               {t("events")}
             </Link>
             <LanguageSelect />
