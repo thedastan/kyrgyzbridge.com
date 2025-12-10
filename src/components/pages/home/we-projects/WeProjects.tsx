@@ -31,7 +31,7 @@ const WeProjects = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[10px] gap-[20px] mt-10">
           {data?.slice(0, 3).map((el, index) => (
             <Link
-              href={`/all_projects/${el.id}`}
+              href={`/all_projects/${el.slug}`}
               data-aos="fade-up"
               data-aos-delay={index * 300}
               key={index}

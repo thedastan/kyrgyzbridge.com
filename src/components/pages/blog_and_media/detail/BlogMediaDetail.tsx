@@ -9,10 +9,11 @@ const BlogMediaDetail = () => {
   const { data } = useGetBlogQuery();
   const params = useParams();
 
-  const id = Array.isArray(params.id) ? params.id[0] : params.id;
-  const numericId = Number(id);
+  // Get the slug from params
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
 
-  const blog = data?.find((el) => el.id === numericId);
+  // Find project by slug
+  const blog = data?.find((el) => el.slug === slug);
 
   if (!blog) {
     return (

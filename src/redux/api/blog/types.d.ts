@@ -1,6 +1,7 @@
 namespace BLOG {
   export type GetBlogRes = {
     id: number;
+    slug: string;
     title: string;
     description: string;
     image: string;
@@ -12,6 +13,7 @@ namespace BLOG {
 namespace PROJECTS {
   export type GetProjectsRes = {
     id: number;
+    slug: string;
     title: string;
     description: string;
     images: {

@@ -14,13 +14,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const AllProjectDetail = () => {
-  const { data } = useGetProjectsQuery();
+  const { data, isLoading } = useGetProjectsQuery();
   const params = useParams();
 
-  const id = Array.isArray(params.id) ? params.id[0] : params.id;
-  const numericId = Number(id);
+  // ✅ Get the slug from the URL
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
 
-  const project = data?.find((el) => el.id === numericId);
+  // ✅ Find project by slug (not id!)
+  const project = data?.find((el) => el.slug === slug);
+
   const swiperRef = useRef<any>(null);
 
   if (!project) {
