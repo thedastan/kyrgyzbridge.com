@@ -1,15 +1,19 @@
 "use client";
 
-import { Description } from "@/components/ui/text/Description";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import Button from "@/components/ui/button/Button";
-import { Title } from "@/components/ui/text/Title";
-import { CiLocationOn } from "react-icons/ci";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useState } from "react";
+import { CiLocationOn } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
+import { useTranslations } from "next-intl";
+
+import { Description } from "@/components/ui/text/Description";
+import { Title } from "@/components/ui/text/Title";
+import Button from "@/components/ui/button/Button";
 import { useGetEventQuery } from "@/redux/api/blog";
+
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 const Events = () => {
   const t = useTranslations("Events");
@@ -21,11 +25,8 @@ const Events = () => {
   const toggleExpand = (id: number) => {
     setExpandedIds((prev) => {
       const newSet = new Set(prev);
-      if (newSet.has(id)) {
-        newSet.delete(id);
-      } else {
-        newSet.add(id);
-      }
+      if (newSet.has(id)) newSet.delete(id);
+      else newSet.add(id);
       return newSet;
     });
   };
@@ -37,6 +38,34 @@ const Events = () => {
   });
 
   const visibleEvents = sortedData.slice(0, visibleCount);
+
+  useEffect(() => {
+    const galleryElements = document.querySelectorAll(
+      "[data-fancybox='events-gallery']"
+    );
+
+    galleryElements.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        Fancybox.show(
+          Array.from(galleryElements).map((el) => ({
+            src: (el as HTMLAnchorElement).href,
+            type: "image",
+            caption:
+              (el as HTMLAnchorElement).getAttribute("data-caption") || "",
+          })),
+          {
+            // любые допустимые опции, например:
+            dragToClose: true,
+          }
+        );
+      });
+    });
+
+    return () => {
+      Fancybox.destroy();
+    };
+  }, [data]);
 
   return (
     <section id="events" className="py-10">
@@ -58,17 +87,22 @@ const Events = () => {
               <div
                 key={el.id}
                 data-aos="fade-up"
-                className="w-full md:w-full h-full"
+                className="w-full md:w-full h-full mb-6 md:mb-0"
               >
-                <div className={`${isBlue ? "" : "order-2"}`}>
+                {/* Fancybox обертка */}
+                <Link
+                  href={el.image}
+                  data-fancybox="events-gallery"
+                  data-caption={el.title}
+                >
                   <Image
-                    className="w-full md:h-[540px] h-[300px] object-cover"
+                    className="w-full md:h-[540px] h-[300px] object-cover cursor-pointer"
                     src={el.image}
                     alt={el.title}
                     width={800}
                     height={600}
                   />
-                </div>
+                </Link>
 
                 <div
                   className={`w-full md:flex-col flex-col flex items-center md:justify-start justify-center p-3 gap-2
@@ -111,7 +145,7 @@ const Events = () => {
                             {el.description}
                             <button
                               onClick={() => toggleExpand(el.id)}
-                              className="text-[#E16C2B] hover:underline ml-1 inline cursor-pointer"
+                              className="text-[#E16C2B]  hover:underline ml-1 inline cursor-pointer"
                             >
                               свернуть
                             </button>
@@ -133,11 +167,11 @@ const Events = () => {
                     </div>
 
                     <Link
-                      className="w-full md:w-fit"
+                      className="w-full md:w-[300px]"
                       target="_blank"
                       href={el.link || "#"}
                     >
-                      <Button className="border-none w-full md:w-[180px] text-white bg-[#E16C2B]">
+                      <Button className="border-none w-full text-white bg-[#E16C2B] mt-2 md:mt-0">
                         {t("more")}
                       </Button>
                     </Link>

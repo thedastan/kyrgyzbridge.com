@@ -45,11 +45,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* <div className="md:block hidden relative w-[60px] h-full">
-              <Image fill src={img} objectFit="contain" alt="img" />
-            </div> */}
-
-            <div className="flex flex-col overflow-hidden">
+            <div className="md:block hidden flex-col overflow-hidden">
               {[...data, ...data].map((index) => (
                 <Image src={index} alt="img" />
               ))}
