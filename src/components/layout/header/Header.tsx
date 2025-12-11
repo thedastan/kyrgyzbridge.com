@@ -84,8 +84,8 @@ const Header = () => {
               <button onClick={() => handleAnchor("project")}>
                 {t("projects")}
               </button>
-              <button onClick={() => handleAnchor("mission")}>
-                {t("mission")}
+              <button onClick={() => handleAnchor("blogMedia")}>
+                {t("blogMedia")}
               </button>
               <button onClick={() => handleAnchor("events")}>
                 {t("events")}

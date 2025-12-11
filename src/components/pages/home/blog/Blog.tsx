@@ -11,7 +11,7 @@ const Blog = () => {
   const t = useTranslations("Blog");
   const { data } = useGetBlogQuery();
   return (
-    <section className="py-10">
+    <section className="py-10" id="blogMedia">
       <div className="container">
         <div className="text-center flex flex-col justify-center items-center">
           <Description
@@ -44,7 +44,11 @@ const Blog = () => {
                   <Title className="!text-[24px] font-[600] leading-[100%] text-white">
                     {el.title}
                   </Title>
-                  <Description>{el.description}</Description>
+                  <Description>
+                    {el.description.length > 150
+                      ? el.description.slice(0, 150) + "..."
+                      : el.description}
+                  </Description>
                   <Link href={`/blog_and_media/${el.slug}`}>
                     <Button className="bg-[#E16C2B] border-none mt-2">
                       {t("read")}

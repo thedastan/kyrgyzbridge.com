@@ -1,34 +1,13 @@
 import Button from "@/components/ui/button/Button";
 import { Description } from "@/components/ui/text/Description";
 import { Title } from "@/components/ui/text/Title";
-import logo from "@/assets/images/k.png";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-
-const data = [logo, logo, logo, logo, logo, logo, logo];
 
 const WhoAre = () => {
   const t = useTranslations("WhoAre");
   return (
     <section>
-      <div className="overflow-hidden">
-        <div className="flex bg-[#1D49C5] h-[88px] items-center">
-          <div className="flex animate-scroll-left">
-            {/* Два прохода для бесконечности */}
-            {[...data, ...data].map((icon, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 flex items-center justify-center   h-[40px] px-20"
-              >
-                <Title className="text-[#ffffff7a] uppercase">
-                  {t("bridge")}
-                </Title>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <div id="about" className="bg-[#F3F5F0]">
         <div className=""></div>
         <div

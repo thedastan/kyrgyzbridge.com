@@ -3,7 +3,7 @@
     "hero": "HOME",
     "about": "ABOUT US",
     "projects": "PROJECTS",
-    "mission": "OUR MISSION",
+    "blogMedia": "MEDIA BLOG",
     "events": "EVENTS",
     "contacts": "CONTACTS"
   },
@@ -21,7 +21,7 @@
   "WhoAre": {
     "title": "WHO ARE WE?",
     "description": "Brücke nach Kirgisistan is an independent non-profit organization founded in Switzerland in 2012.",
-    "about_us": "About us",
+    "about_us": "ABOUT US",
     "bridge": "Bridge to Kyrgyzstan"
   },
   "Values": {
@@ -36,17 +36,17 @@
   "WeProjects": {
     "title": "OUR PROJECTS",
     "description": "Meet the Visionaries Behind Our Success",
-    "all_projects": "All projects"
+    "all_projects": "ALL PROJECTS"
   },
   "Events": {
     "title": "EVENTS & CALENDAR",
-    "more": "Learn more",
-    "more2": "More"
+    "more": "LEARN MORE",
+    "more2": "More events"
   },
   "Blog": {
     "title": "BLOG & MEDIA",
     "description": "Actions that change lives",
-    "read": "Read"
+    "read": "READ"
   },
   "Contacts": {
     "title": "Contact Form",
@@ -58,7 +58,7 @@
     "send": "SEND",
     "media": "Media",
     "title2": "Want to be part of the change?",
-    "subscribe": "Subscribe",
+    "subscribe": "SUBSCRIBE",
     "email2": "Enter your email",
     "year": "© 2025 All rights reserved. Brücke nach Kirgistan.",
     "success": "Message sent!",

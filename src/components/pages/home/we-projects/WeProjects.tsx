@@ -18,7 +18,9 @@ const WeProjects = () => {
         >
           <div className="w-full max-w-[800px] flex flex-col gap-5">
             <Description>{t("title")}</Description>
-            <TitleComponent>{t("description")}</TitleComponent>
+            <TitleComponent className="font-[500]">
+              {t("description")}
+            </TitleComponent>
           </div>
 
           <Link href="/all_projects">
@@ -28,7 +30,7 @@ const WeProjects = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[10px] gap-[20px] mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[10px] gap-[20px] mt-10  ">
           {data?.slice(0, 3).map((el, index) => (
             <Link
               href={`/all_projects/${el.slug}`}
@@ -39,16 +41,18 @@ const WeProjects = () => {
                 backgroundImage: `url(${el.images[0]?.image})`,
                 backgroundSize: "cover",
               }}
-              className="w-full h-[300px]  text-white rounded-[24px] p-8 flex flex-col items-start justify-end gap-3"
+              className="w-full h-[300px]  text-white rounded-[24px] flex flex-col items-start justify-end gap-3"
             >
-              <Title className="!text-[24px] md:w-[80%] font-[600] leading-[100%] text-white">
-                {el.title}
-              </Title>
-              <Description className="md:w-[87%]">
-                {el.description.length > 150
-                  ? el.description.slice(0, 150) + "..."
-                  : el.description}
-              </Description>
+              <div className="p-8 w-full h-full rounded-[24px] flex flex-col items-start justify-end gap-3 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                <Title className="!text-[24px] font-[600] leading-[100%] text-white">
+                  {el.title}
+                </Title>
+                <Description>
+                  {el.description.length > 150
+                    ? el.description.slice(0, 150) + "..."
+                    : el.description}
+                </Description>
+              </div>
             </Link>
           ))}
         </div>
