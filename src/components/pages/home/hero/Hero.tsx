@@ -1,7 +1,9 @@
 import Button from "@/components/ui/button/Button";
 import { Description } from "@/components/ui/text/Description";
 import { TitleComponent } from "@/components/ui/text/TitleComponent";
-import hero_img from "@/assets/images/f0214e54b5b650ce0888125d0a6270fb7d1d1313.png";
+// import hero_img from "@/assets/images/f0214e54b5b650ce0888125d0a6270fb7d1d1313.png";
+import hero_img from "@/assets/images/Hero_new.jpeg";
+
 import Image from "next/image";
 
 // import img from "@/assets/images/ornament.png";
