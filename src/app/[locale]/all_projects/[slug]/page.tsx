@@ -1,6 +1,7 @@
 // src/app/[locale]/all_projects/[slug]/page.tsx
 
-import AllProjectDetail from "@/components/pages/all_projects/detail/AllProjectDetail";
+// import AllProjectDetail from "@/components/pages/all_projects/detail/AllProjectDetail";
+import Detail_project from "@/components/pages/all_projects/Detail_project";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -58,5 +59,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function AllProjectPage() {
-  return <AllProjectDetail />;
+  return <Detail_project />;
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import LanguageSelect from "./LanguageModal";
 import { useTranslations } from "next-intl";
 
 import { usePathname, useRouter } from "next/navigation";
@@ -48,15 +47,13 @@ const BurgerMenu = ({
   return (
     <div
       id="menu-overlay"
-      className={`fixed top-0 left-0 bg-[rgba(0,0,0,0.5)] w-full h-[100vh] z-50 transition-opacity duration-700 ${
-        isOpen
-          ? "opacity-100 pointer-events-auto"
-          : "opacity-0 pointer-events-none"
+      className={`fixed top-0 right-0 bg-[rgba(0,0,0,0)] w-full h-[100vh] z-50 transition-opacity duration-700 ${
+        isOpen ? " pointer-events-auto" : "  pointer-events-none"
       }`}
     >
       <div
-        className={`fixed top-0 left-0 w-[100%] h-full bg-white  p-4 flex flex-col justify-start gap-4 shadow-lg z-50 transition-transform duration-700 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 right-0 w-[100%] h-full bg-white p-4 flex flex-col justify-start gap-4 shadow-lg z-50 transition-transform duration-700 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="w-full flex flex-col justify-between items-start h-[70ch]">
@@ -75,7 +72,6 @@ const BurgerMenu = ({
             <button onClick={() => handleAnchor("contact")}>
               {t("contacts")}
             </button>
-            <LanguageSelect />
           </div>
         </div>
       </div>

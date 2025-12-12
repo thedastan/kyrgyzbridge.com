@@ -37,10 +37,9 @@ body {
 
 .burger__button {
   position: absolute;
-  left: 0px;
 
-  overflow: hidden;
-
+  // overflow: hidden;
+  right: -15px;
   display: block;
   transform: scale(0.47);
   z-index: 1000;
@@ -65,15 +64,15 @@ body {
   }
 
   span:nth-of-type(1) {
-    width: 50%;
+    width: -50%;
   }
 
   span:nth-of-type(2) {
-    width: 100%;
+    width: -100%;
   }
 
   span:nth-of-type(3) {
-    width: 75%;
+    width: -75%;
   }
 
   input[type="checkbox"] {
@@ -82,7 +81,7 @@ body {
 
   input[type="checkbox"]:checked ~ span:nth-of-type(1) {
     transform-origin: bottom;
-    transform: rotatez(45deg) translate(8px, 0px);
+    transform: rotatez(45deg) translate(13px, 12px);
   }
 
   input[type="checkbox"]:checked ~ span:nth-of-type(2) {
@@ -92,8 +91,8 @@ body {
 
   input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     transform-origin: bottom;
-    width: 50%;
-    transform: translate(30px, -9px) rotatez(45deg);
+    background: transparent;
+    transform: translate(3px, -20px) rotatez(45deg);
   }
 }
 

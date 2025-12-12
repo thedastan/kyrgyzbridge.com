@@ -30,7 +30,7 @@ const LanguageSelect = ({ textColor = "text-white" }: LanguageSelectProps) => {
   return (
     <div className="relative inline-block" ref={menuRef}>
       <button
-        className={`flex items-center gap-2 w-[70px]    !text-[black]  bg-transparent   ${textColor}   text-[14px]   transition-all`}
+        className={`flex items-center gap-2 w-[50px]    !text-[black]  bg-transparent   ${textColor}   text-[14px]   transition-all`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {options.find((opt) => opt.value === locale)?.label}

@@ -98,18 +98,21 @@ const Header = () => {
         style={{ zIndex: 1000 }}
       >
         <div className="container">
-          <div className="flex justify-between md:flex-row flex-row-reverse items-center">
-            <div
-              className="flex gap-[40px] md:flex-row flex-row-reverse items-center cursor-pointer"
-              onClick={() => handleAnchor("hero")}
-            >
-              <Image width={90} height={63} src={logo} alt="img" />
+          <div className="w-full flex justify-between">
+            <div className="flex gap-[40px] items-center cursor-pointer  ">
+              <Image
+                onClick={() => handleAnchor("hero")}
+                width={90}
+                height={63}
+                src={logo}
+                alt="img"
+              />
               <div className="items-center md:flex">
                 <LanguageSelect />
               </div>
             </div>
 
-            <div className="flex md:hidden items-center justify-center">
+            <div className="flex md:hidden items-center relative p-0 justify-end ">
               <div className="burger__button">
                 <label>
                   <input

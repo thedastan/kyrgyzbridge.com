@@ -21,7 +21,7 @@ const WhoAre = () => {
             {t("description")}
           </Title>
 
-          <Link href="#project">
+          <Link href="/about_us">
             <Button> {t("about_us")}</Button>
           </Link>
         </div>
