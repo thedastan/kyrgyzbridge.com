@@ -5,12 +5,10 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Title } from "@/components/ui/text/Title";
 import { useGetAboutQuery } from "@/redux/api/blog";
-import img from "@/assets/images/Vector (4).png";
 
 const About_card = () => {
   const t = useTranslations("WhoAre");
   const { data } = useGetAboutQuery();
-  const data2 = [img, img, img, img, img, img, img];
 
   return (
     <section className=" md:bg-[#ffffff] bg-[#F3F5F0]">
@@ -50,27 +48,6 @@ const About_card = () => {
                   <Description className="!text-[16px] mt-[12px]">
                     {el.description}
                   </Description>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="overflow-hidden w-full">
-        <div className="h-[88px] flex items-center">
-          <div className="flex w-max scroll-left">
-            {[...data2, ...data2].map((icon, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 flex items-center justify-center px-1"
-              >
-                <div className="relative w-[180px] h-[80px]">
-                  <Image
-                    fill
-                    src={icon}
-                    alt="logo"
-                    className="object-contain"
-                  />
                 </div>
               </div>
             ))}

@@ -33,7 +33,13 @@ const Header = () => {
     setIsOpen(false);
   };
 
-  // Скролл после перехода
+  const handleNavigate = (path: string) => {
+    setActive(path); // ✅ сразу подсвечиваем кнопку
+    setIsOpen(false);
+    router.push(path);
+  };
+
+  // Скролл после перехода по hash
   useEffect(() => {
     if (hash) {
       const el = document.getElementById(hash);
@@ -44,13 +50,13 @@ const Header = () => {
     }
   }, [hash, pathname]);
 
-  // ➤ Автоматическая подсветка при скролле
+  // Автоматическая подсветка на главной при скролле
   useEffect(() => {
     if (pathname !== "/") return;
 
     const sections = [
       "hero",
-      "about",
+      "about_us",
       "project",
       "blogMedia",
       "events",
@@ -69,7 +75,7 @@ const Header = () => {
             setActive(id);
           }
         },
-        { threshold: 0.5 } // секция видна минимум на 50%
+        { threshold: 0.5 }
       );
 
       observer.observe(element);
@@ -99,7 +105,7 @@ const Header = () => {
       >
         <div className="container">
           <div className="w-full flex justify-between">
-            <div className="flex gap-[40px] items-center cursor-pointer  ">
+            <div className="flex gap-[40px] items-center cursor-pointer">
               <Image
                 onClick={() => handleAnchor("hero")}
                 width={90}
@@ -112,7 +118,8 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="flex md:hidden items-center relative p-0 justify-end ">
+            {/* Бургер кнопка для мобильного */}
+            <div className="flex md:hidden items-center relative p-0 justify-end">
               <div className="burger__button">
                 <label>
                   <input
@@ -127,6 +134,7 @@ const Header = () => {
               </div>
             </div>
 
+            {/* Десктоп меню */}
             <div className="md:flex hidden items-center gap-[27px]">
               <button
                 onClick={() => handleAnchor("hero")}
@@ -136,8 +144,8 @@ const Header = () => {
               </button>
 
               <button
-                onClick={() => handleAnchor("about")}
-                className={`${activeClass("about")} transition`}
+                onClick={() => handleNavigate("/about_us")}
+                className={`${activeClass("/about_us")} transition`}
               >
                 {t("about")}
               </button>
