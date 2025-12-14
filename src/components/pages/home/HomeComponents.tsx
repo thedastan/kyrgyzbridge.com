@@ -28,7 +28,7 @@ const HomeComponents = () => {
       <WeProjects />
       <Events />
       <Blog />
-      <Partners />
+      {/* <Partners /> */}
       <Contacts />
     </>
   );

@@ -9,7 +9,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { LuUserRound } from "react-icons/lu";
 import logo from "@/assets/images/logo-new.png";
-import frame from "@/assets/svg/frame.svg";
+import frame from "@/assets/svg/Vector.svg";
 import fone from "@/assets/images/Group 1321314511.png";
 import { ContactForm } from "./ContactForm";
 import Button from "@/components/ui/button/Button";
@@ -19,7 +19,23 @@ import { useGetContactsQuery } from "@/redux/api/blog";
 import "alert-go/dist/notifier.css";
 import { toast } from "alert-go";
 
-const data = [frame, frame, frame, frame, frame, frame];
+const data = [
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+  frame,
+];
 
 interface FetchDataPro {
   id: number;
@@ -73,20 +89,23 @@ const Contacts = () => {
   return (
     <section id="contact" className="bg-[#F3F5F0] py-[50px] md:py-[30px]">
       <div className="overflow-hidden">
-        <div className="flex h-[88px] items-center">
+        <div className="flex h-[60px] items-center">
           <div className="flex">
             {[...data, ...data].map((icon, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 flex items-center justify-center"
               >
-                <div className="relative w-[1200px] h-[80px]">
+                <div className="relative w-[220px] h-[80px]">
                   <Image
                     fill
                     src={icon}
                     alt="frame"
-                    objectFit="contain"
                     className="max-w-none"
+                    style={{
+                      filter:
+                        "invert(37%) sepia(64%) saturate(5206%) hue-rotate(1deg) brightness(97%) contrast(101%)",
+                    }}
                   />
                 </div>
               </div>
