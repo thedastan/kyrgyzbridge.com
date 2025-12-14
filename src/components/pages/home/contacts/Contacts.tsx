@@ -88,20 +88,20 @@ const Contacts = () => {
 
   return (
     <section id="contact" className="bg-[#F3F5F0] py-[50px] md:py-[30px]">
-      <div className="overflow-hidden">
+      <div className="overflow-hidden w-full">
         <div className="flex h-[60px] items-center">
-          <div className="flex">
+          <div className="flex w-max animate-scroll">
             {[...data, ...data].map((icon, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center"
+                className="flex-shrink-0 flex items-center justify-center px-1"
               >
-                <div className="relative w-[220px] h-[80px]">
+                <div className="relative w-[180px] h-[80px]">
                   <Image
                     fill
                     src={icon}
                     alt="frame"
-                    className="max-w-none"
+                    className="object-contain"
                     style={{
                       filter:
                         "invert(37%) sepia(64%) saturate(5206%) hue-rotate(1deg) brightness(97%) contrast(101%)",

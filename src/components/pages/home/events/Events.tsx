@@ -170,8 +170,7 @@ const Events = () => {
                         }`}
                       >
                         <CiLocationOn size={24} />
-                        {el.address}, {el.start_time} – {el.start_end}{" "}
-                        {el.start_date}
+                        {el.address}, {el.start_end} {el.start_date}
                       </Description>
 
                       <Description>

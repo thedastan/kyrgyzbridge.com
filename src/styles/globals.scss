@@ -161,3 +161,17 @@ body {
 .scroll-left {
   animation: scroll-left 30s linear infinite;
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll-left 50s linear infinite;
+}

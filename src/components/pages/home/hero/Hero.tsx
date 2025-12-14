@@ -48,7 +48,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="overflow-hidden w-full">
+
+        {/* <div className="overflow-hidden w-full">
           <div className="h-[88px] flex items-center">
             <div className="flex w-max scroll-left">
               {[...data, ...data].map((icon, index) => (
@@ -61,6 +62,28 @@ const Hero = () => {
                       fill
                       src={icon}
                       alt="logo"
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div> */}
+
+        <div className="overflow-hidden w-full">
+          <div className="flex h-[60px] items-center">
+            <div className="flex w-max animate-scroll">
+              {[...data, ...data].map((icon, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 flex items-center justify-center px-1"
+                >
+                  <div className="relative w-[180px] h-[80px]">
+                    <Image
+                      fill
+                      src={icon}
+                      alt="frame"
                       className="object-contain"
                     />
                   </div>

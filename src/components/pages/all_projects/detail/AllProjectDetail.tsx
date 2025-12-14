@@ -50,7 +50,7 @@ const AllProjectDetail = () => {
       {/* <Title className="text-[32px] mb-4">{project.title}</Title> */}
 
       <div className="flex justify-center">
-        <div className="relative md:w-[95%] w-[90%] md:h-[600px] h-[200px] rounded-[24px] mb-10 overflow-hidden">
+        <div className="relative md:w-[95%] w-[90%] md:h-[600px] h-full rounded-[24px] mb-10 overflow-hidden">
           <Swiper
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
@@ -65,7 +65,7 @@ const AllProjectDetail = () => {
           >
             {project.images?.map((img, index) => (
               <SwiperSlide key={index}>
-                <div className="relative w-full md:h-[600px] h-[200px]">
+                <div className="relative w-full md:h-[600px] h-[350px]">
                   <Image
                     src={img.image}
                     alt={project.title}

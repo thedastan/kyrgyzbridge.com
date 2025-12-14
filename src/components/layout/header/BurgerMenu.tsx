@@ -57,7 +57,7 @@ const BurgerMenu = ({
         }`}
       >
         <div className="w-full flex flex-col justify-between items-start h-[70ch]">
-          <div className="flex flex-col items-start w-[100%] text-start p-[20px] gap-4 mt-16 ">
+          <div className="flex flex-col items-center w-[100%] text-start p-[20px] gap-4 mt-16">
             <button onClick={() => handleAnchor("hero")}>{t("hero")}</button>
             <button
               onClick={() => {

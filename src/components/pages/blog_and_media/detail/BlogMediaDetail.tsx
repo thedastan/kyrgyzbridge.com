@@ -75,7 +75,7 @@ const BlogMediaDetail = () => {
         data-caption={blog.title}
       >
         <div
-          className="md:w-[95%] w-[90%] md:h-[600px] h-[400px] rounded-[24px] bg-cover bg-center cursor-pointer"
+          className="md:w-[95%] w-[90%] md:h-[600px] h-[350px] rounded-[24px] bg-cover bg-center cursor-pointer"
           style={{ backgroundImage: `url(${blog.image})` }}
         />
       </Link>
