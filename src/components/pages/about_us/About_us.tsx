@@ -9,7 +9,7 @@ const About_us = () => {
     <div>
       <About_hero />
       <About_card />
-      <Partners />
+      {/* <Partners /> */}
       <Contacts />
     </div>
   );

@@ -135,8 +135,29 @@ body {
   }
 }
 
-.animate-scroll-left {
-  display: flex;
+// .animate-scroll-left {
+//   display: flex;
+//   animation: scroll-left 20s linear infinite;
+//   /* Важно: ширина контейнера должна быть в 2 раза больше одного блока */
+// }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-left {
   animation: scroll-left 20s linear infinite;
-  /* Важно: ширина контейнера должна быть в 2 раза больше одного блока */
+}
+
+.scroll-left:hover {
+  animation-play-state: paused;
+}
+
+.scroll-left {
+  animation: scroll-left 30s linear infinite;
 }

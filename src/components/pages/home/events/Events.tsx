@@ -109,9 +109,12 @@ const Events = () => {
                     <Swiper
                       modules={[Pagination, Mousewheel, Keyboard]}
                       pagination={{ clickable: true }}
-                      mousewheel={true}
-                      keyboard={true}
-                      spaceBetween={0}
+                      keyboard={{ enabled: true }}
+                      mousewheel={{
+                        forceToAxis: true, // 🔥 ключевой параметр
+                        sensitivity: 1,
+                        releaseOnEdges: true,
+                      }}
                       slidesPerView={1}
                       className="h-[300px] md:h-[540px] w-full"
                     >
@@ -157,7 +160,7 @@ const Events = () => {
                     className={
                       isExpanded
                         ? "flex items-start flex-col-reverse gap-2 w-full"
-                        : "flex items-end flex-col md:flex-row w-full"
+                        : "flex items-end flex-col md:flex-row w-full gap-2"
                     }
                   >
                     <div className="md:w-full flex flex-col gap-2">
@@ -179,7 +182,7 @@ const Events = () => {
                               onClick={() => toggleExpand(el.id)}
                               className="text-[#E16C2B] hover:underline ml-1 inline cursor-pointer"
                             >
-                              свернуть
+                              {t("show_less")}
                             </button>
                           </>
                         ) : isLong ? (
@@ -189,7 +192,7 @@ const Events = () => {
                               onClick={() => toggleExpand(el.id)}
                               className="text-[#E16C2B] hover:underline ml-1 inline cursor-pointer"
                             >
-                              ... читать дальше
+                              ... {t("read_more")}
                             </button>
                           </>
                         ) : (

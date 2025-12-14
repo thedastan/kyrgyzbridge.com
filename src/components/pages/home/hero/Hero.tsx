@@ -49,26 +49,21 @@ const Hero = () => {
           </div>
         </div>
         <div className="overflow-hidden w-full">
-          <div className="flex h-[55px] items-center">
-            <div className="flex animate-scroll-left whitespace-nowrap">
-              {/* Дублируем два раза — для бесконечности */}
-              {Array.from({ length: 2 }).map((_, cloneIndex) => (
-                <div key={cloneIndex} className="flex">
-                  {data.map((icon, index) => (
-                    <div
-                      key={`${cloneIndex}-${index}`}
-                      className="flex-shrink-0 flex items-center justify-center"
-                    >
-                      <div className="relative w-[180px] h-[80px]">
-                        <Image
-                          fill
-                          src={icon}
-                          alt="logo"
-                          style={{ objectFit: "contain" }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+          <div className="h-[88px] flex items-center">
+            <div className="flex w-max scroll-left">
+              {[...data, ...data].map((icon, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 flex items-center justify-center px-1"
+                >
+                  <div className="relative w-[180px] h-[80px]">
+                    <Image
+                      fill
+                      src={icon}
+                      alt="logo"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               ))}
             </div>

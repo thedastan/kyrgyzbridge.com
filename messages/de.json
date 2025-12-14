@@ -42,7 +42,9 @@
   "Events": {
     "title": "VERANSTALTUNGEN & KALENDER",
     "more": "MEHR ERFAHREN",
-    "more2": "Mehr Veranstaltungen"
+    "more2": "Mehr Veranstaltungen",
+    "read_more": "Mehr lesen",
+    "show_less": "Weniger anzeigen"
   },
   "Blog": {
     "title": "BLOG & MEDIEN",
