@@ -33,6 +33,14 @@ const api = index.injectEndpoints({
       }),
       providesTags: ["contacts"],
     }),
+
+    getAbout: build.query<ABOUT.GetaboutRes, ABOUT.GetaboutReq>({
+      query: () => ({
+        url: `/about-us/`,
+        method: "GET",
+      }),
+      providesTags: ["about-us"],
+    }),
   }),
 });
 
@@ -41,4 +49,5 @@ export const {
   useGetProjectsQuery,
   useGetContactsQuery,
   useGetEventQuery,
+  useGetAboutQuery,
 } = api;

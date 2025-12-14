@@ -54,3 +54,14 @@ namespace EVENTS {
 
   export type GetEventsReq = void;
 }
+
+namespace ABOUT {
+  export type GetaboutRes = {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+  }[];
+
+  export type GetaboutReq = void;
+}
